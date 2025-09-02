@@ -3,7 +3,9 @@
 import * as React from "react";
 import { format } from "date-fns";
 import { Calendar as CalendarIcon } from "lucide-react";
-import { CirclePlus } from "lucide-react";
+import { CirclePlus, CircleUserRoundIcon } from "lucide-react";
+
+import { useFileUpload } from "@/hooks/use-file-upload";
 
 import { cn } from "@/lib/utils";
 import { Input } from "@/components/ui/input";
@@ -28,6 +30,14 @@ import { Separator } from "@/components/ui/separator";
 export default function Home() {
   const [date, setDate] = React.useState<Date>();
 
+  const [{ files }, { removeFile, openFileDialog, getInputProps }] =
+    useFileUpload({
+      accept: "image/*",
+    });
+
+  const previewUrl = files[0]?.preview || null;
+  const fileName = files[0]?.file.name || null;
+
   return (
     <div className="grid max-w-2xl mx-auto gap-4 p-4">
       <h1 className="text-2xl">Cadastro de novos membros</h1>
@@ -42,6 +52,59 @@ export default function Home() {
       {/* -- NOME COMPLETO */}
       <Label htmlFor="ipt-nome">Nome completo:</Label>
       <Input type="text" placeholder="Nome completo" id="ipt-nome" />
+
+      {/* CADASTRAR FOTO */}
+      <Label htmlFor="ipt-foto">Foto:</Label>
+      {/* <Input type="file" id="ipt-foto" accept="image/*" /> */}
+      <div className="flex flex-col gap-2">
+        <div className="inline-flex items-center gap-2 align-top">
+          <div
+            className="border-input relative flex size-9 shrink-0 items-center justify-center overflow-hidden rounded-md border"
+            aria-label={
+              previewUrl ? "Preview of uploaded image" : "Default user avatar"
+            }
+          >
+            {previewUrl ? (
+              <img
+                className="size-full object-cover"
+                src={previewUrl}
+                alt="Preview of uploaded image"
+                width={32}
+                height={32}
+              />
+            ) : (
+              <div aria-hidden="true">
+                <CircleUserRoundIcon className="opacity-80" size={16} />
+              </div>
+            )}
+          </div>
+          <div className="relative inline-block">
+            <Button onClick={openFileDialog} aria-haspopup="dialog">
+              {fileName ? "Alterar foto" : "Enviar foto"}
+            </Button>
+            <input
+              {...getInputProps()}
+              className="sr-only"
+              aria-label="Upload image file"
+              tabIndex={-1}
+            />
+          </div>
+        </div>
+        {fileName && (
+          <div className="inline-flex gap-2 text-xs">
+            <p className="text-muted-foreground truncate" aria-live="polite">
+              {fileName}
+            </p>{" "}
+            <button
+              onClick={() => removeFile(files[0]?.id)}
+              className="text-destructive font-medium hover:underline"
+              aria-label={`Remove ${fileName}`}
+            >
+              Remover
+            </button>
+          </div>
+        )}
+      </div>
 
       {/* -- EMAIL */}
       <Label htmlFor="ipt-email">E-mail:</Label>
