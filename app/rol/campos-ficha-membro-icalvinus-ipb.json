@@ -1,0 +1,279 @@
+{
+  "ficha_de_membros": {
+    "titulo": "Ficha de Membros - Igreja Presbiteriana de Anápolis",
+    "grupos": [
+      {
+        "nome_grupo": "Dados Pessoais",
+        "campos": [
+          {
+            "nome_campo": "Nome",
+            "tipo": "texto"
+          },
+          {
+            "nome_campo": "Endereço",
+            "tipo": "texto"
+          },
+          {
+            "nome_campo": "Complemento",
+            "tipo": "texto"
+          },
+          {
+            "nome_campo": "Bairro",
+            "tipo": "texto"
+          },
+          {
+            "nome_campo": "Cidade",
+            "tipo": "texto"
+          },
+          {
+            "nome_campo": "Estado",
+            "tipo": "texto"
+          },
+          {
+            "nome_campo": "País",
+            "tipo": "texto"
+          },
+          {
+            "nome_campo": "CEP",
+            "tipo": "texto"
+          },
+          {
+            "nome_campo": "Telefone",
+            "tipo": "texto"
+          },
+          {
+            "nome_campo": "Celular",
+            "tipo": "texto"
+          },
+          {
+            "nome_campo": "E-mail",
+            "tipo": "email"
+          },
+          {
+            "nome_campo": "Data de Nascimento",
+            "tipo": "data"
+          },
+          {
+            "nome_campo": "Naturalidade",
+            "tipo": "texto"
+          },
+          {
+            "nome_campo": "Sexo",
+            "tipo": "texto"
+          }
+        ]
+      },
+      {
+        "nome_grupo": "Dados Complementares",
+        "campos": [
+          {
+            "nome_campo": "Estado Civil",
+            "tipo": "texto"
+          },
+          {
+            "nome_campo": "Cônjuge",
+            "tipo": "texto"
+          },
+          {
+            "nome_campo": "Data do Casamento",
+            "tipo": "data"
+          },
+          {
+            "nome_campo": "CPF ou RG",
+            "tipo": "texto"
+          },
+          {
+            "nome_campo": "Órgão Emissor",
+            "tipo": "texto"
+          },
+          {
+            "nome_campo": "Escolaridade",
+            "tipo": "texto"
+          },
+          {
+            "nome_campo": "Profissão",
+            "tipo": "texto"
+          },
+          {
+            "nome_campo": "Nome do Pai",
+            "tipo": "texto"
+          },
+          {
+            "nome_campo": "Nome da Mãe",
+            "tipo": "texto"
+          }
+        ]
+      },
+      {
+        "nome_grupo": "Dados Eclesiásticos",
+        "campos": [
+          {
+            "nome_campo": "Onde congrega (Igreja Principal ou Congregação)",
+            "tipo": "texto"
+          },
+          {
+            "nome_campo": "Número de Ordem (matrícula)",
+            "tipo": "texto"
+          },
+          {
+            "nome_campo": "Membro",
+            "tipo": "lista_de_opcoes",
+            "opcoes": [
+              "Comungante",
+              "Não comungante",
+              "Não membro"
+            ]
+          },
+          {
+            "nome_campo": "Ofício",
+            "tipo": "lista_de_opcoes",
+            "opcoes": [
+              "Não oficial",
+              "Diácono",
+              "Presbítero",
+              "Presbítero em disponibilidade"
+            ]
+          },
+          {
+            "nome_campo": "Data do Batismo",
+            "tipo": "data"
+          },
+          {
+            "nome_campo": "Pastor que realizou o batismo",
+            "tipo": "texto"
+          },
+          {
+            "nome_campo": "Igreja onde aconteceu o batismo",
+            "tipo": "texto"
+          },
+          {
+            "nome_campo": "Data da Profissão de Fé",
+            "tipo": "data"
+          },
+          {
+            "nome_campo": "Pastor que dirigiu a Profissão de Fé",
+            "tipo": "texto"
+          },
+          {
+            "nome_campo": "Igreja onde aconteceu a Profissão de Fé",
+            "tipo": "texto"
+          },
+          {
+            "nome_campo": "Data da Admissão",
+            "tipo": "data"
+          },
+          {
+            "nome_campo": "Meio de Admissão",
+            "tipo": "lista_de_opcoes",
+            "opcoes": [
+              "Batismo",
+              "Profissão de fé",
+              "Batismo e profissão de fé",
+              "Transferência",
+              "Transferência dos responsáveis",
+              "Restauração",
+              "Jurisdição ex officio",
+              "Jurisdição a pedido",
+              "Jurisdição sobre os responsáveis",
+              "Designação do presbítero"
+            ]
+          },
+          {
+            "nome_campo": "Data da Demissão",
+            "tipo": "data"
+          },
+          {
+            "nome_campo": "Meio da Demissão",
+            "tipo": "lista_de_opcoes",
+            "opcoes": [
+              "Exclusão disciplinar",
+              "Exclusão a pedido",
+              "Exclusão por ausência",
+              "Transferência",
+              "Transferência dos responsáveis",
+              "Transferência conselho",
+              "Jurisdição assumida",
+              "Jurisdição sobre os responsáveis",
+              "Profissão de fé",
+              "Falecimento",
+              "Maioridade",
+              "Solicitação dos responsáveis"
+            ]
+          },
+          {
+            "nome_campo": "Situação",
+            "tipo": "lista_de_opcoes",
+            "opcoes": [
+              "Ativo",
+              "Inativo",
+              "Frequenta"
+            ]
+          },
+          {
+            "nome_campo": "Disciplinado",
+            "tipo": "checkbox",
+            "opcoes": [
+              "Sim",
+              "Não"
+            ]
+          },
+          {
+            "nome_campo": "Transferência Pendente",
+            "tipo": "checkbox",
+            "opcoes": [
+              "Sim",
+              "Não"
+            ]
+          }
+        ]
+      },
+      {
+        "nome_grupo": "Relação Familiar",
+        "campos": [
+          {
+            "nome_campo": "Relação",
+            "tipo": "lista_de_opcoes",
+            "opcoes": [
+              "Pai",
+              "Mãe",
+              "Esposo",
+              "Irmão",
+              "Filho"
+            ]
+          },
+          {
+            "nome_campo": "de",
+            "tipo": "selecao_membro"
+          }
+        ]
+      },
+      {
+        "nome_grupo": "Histórico",
+        "campos": [
+          {
+            "nome_campo": "Anotações",
+            "tipo": "texto_longo"
+          }
+        ]
+      },
+      {
+        "nome_grupo": "Mapa",
+        "campos": [
+          {
+            "nome_campo": "Localização",
+            "tipo": "mapa"
+          }
+        ]
+      },
+      {
+        "nome_grupo": "Foto",
+        "campos": [
+          {
+            "nome_campo": "Adicionar/Alterar Foto",
+            "tipo": "upload_arquivo"
+          }
+        ]
+      }
+    ]
+  }
+}
